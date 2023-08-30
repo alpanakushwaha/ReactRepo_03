@@ -2,8 +2,9 @@
   "name": "03_namastereact_coding_assgnnotes_git",
   "version": "1.0.0",
   "description": "third folder in react",
-  "main": "index.html",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {

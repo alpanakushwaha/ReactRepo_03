@@ -1,0 +1,17 @@
+*{
+    margin: 10;
+    padding: 5;
+}
+
+h2{
+    color: blue;
+}
+
+.JSX_title{
+    color:#007700;
+    font-size: 25px;
+}
+
+#FC_div{
+    color:red;
+}

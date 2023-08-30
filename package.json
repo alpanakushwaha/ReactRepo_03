@@ -1,0 +1,22 @@
+{
+  "name": "03_namastereact_coding_assgnnotes_git",
+  "version": "1.0.0",
+  "description": "third folder in react",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpanakushwaha/ReactRepo_03.git"
+  },
+  "author": "alpana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alpanakushwaha/ReactRepo_03/issues"
+  },
+  "homepage": "https://github.com/alpanakushwaha/ReactRepo_03#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

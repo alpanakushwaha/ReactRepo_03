@@ -135,3 +135,27 @@ date: 19 Dec 2023
 >> JSX is syntactical sugar for Developers
 
 >> BAbEl comes along with parcel
+
+>> **_React Components_**
+```javascript
+
+// React Component
+
+const HeaderComponent = () => {
+  return (
+    <div>
+      <h1>Namaste React Functional Component</h1>
+    </div>
+  );
+};
+const HeaderComponent2 = () => {
+   (
+    <div>
+      <h1>Namaste React Functional Component</h1>
+    </div>
+  );
+};
+```
+in above code, HeaderComponent and HeaderComponent2 are same (acc. to Akshay)
+
+but, they are different, they work differently (if they are same, then How?? and why, i don't know at present)

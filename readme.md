@@ -84,4 +84,8 @@ root.render(div)
 
 // Array.map()  // polyfill // mordern Js is converted to older JS
 
+// function myFun()// older code==> babel
+
+// babel => package/ library / actually compiler // transpiler
 ```
+

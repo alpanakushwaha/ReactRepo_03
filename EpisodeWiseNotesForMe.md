@@ -437,7 +437,7 @@ easy for react to add the elements without much effort
 
 
 
->> Q. how does createElement work?
+>> Q. how does React.createElement work?
 	
 	>>import React from "react";
 	>> import { createElement } from "react";

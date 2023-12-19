@@ -1,5 +1,4 @@
-
-```javascript 
+```javascript
  const div = (
    <div className="title">
      <h1>This h1 is React Element written in JSX.</h1>
@@ -89,3 +88,50 @@ root.render(div)
 // babel => package/ library / actually compiler // transpiler
 ```
 
+---
+
+date: 19 Dec 2023
+
+> > Episode 02(Live- recorded) Igniting our App
+
+- Bundlers ... Parcel, Webpack, Vite
+- responsibilities of Parcel(Bundler=>package=>module)
+  - parcel provided server (http://localhost:1234)
+  - Hot module replacement
+  - File watching algorithm- C++
+  - image optimization
+  - Caching while development (\* building takes more time, then .parcel-cache => the space/ memory for parcel to execute in much lesser time)
+  - minified files (html, css, js)=> removes the console.log
+  - cleaning the code / _Code splitting_
+  - Dev and production build
+  - compatible with older versions of browser (babel/browserlist)
+  - supports HTTPS on dev
+  - also handles multiple ports
+  - _*Consistent hashing algorithm*_
+  - Zero config
+  - transitive dependencies (dependency tree exists)
+  - tree shaking (removing unused code)
+
+\*\* Since the js file has 'import', importing does not happens in normal js files, Importing happens when the file is a module type(mini-pkg). (_search all script types_)
+
+---
+
+### Episode 03 : Laying the Foundation
+
+> > Array.map() // polyfill // mordern Js is converted to older JS
+
+> > function myFun()// older code==> babel
+
+> > reconcilliation algo (for unique keys)
+> > Diffing algo
+
+> > render .. is updating things in DOM
+> > rerender .. is react changes the whole DOM tree after first render
+
+> > babel => package/ library / actually compiler // transpiler => uses 'browserList'
+> > AST
+
+> > **JSX** => React.createElement => Object => HTML(DOM)
+>> JSX is syntactical sugar for Developers
+
+>> BAbEl comes along with parcel

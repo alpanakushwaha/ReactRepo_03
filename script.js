@@ -18,11 +18,30 @@ const HeaderComponent = () => {
   return (
     <div>
       {heading4}
+      <FuncComponent />
 
       <h1>Namaste React Functional Component</h1>
     </div>
   );
 };
+
+var xyz = 10;
+var string12 = "This is jsting variable written inside funcComponent.";
+const FuncComponent = () => {
+  return (
+    <div>
+      {string12}
+      {xyz}
+
+      <p>
+        This is a paragraph tag. This is a paragraph tag.This is a paragraph
+        tag.This is a paragraph tag.This is a paragraph tag.
+      </p>
+      {4 * 8}
+    </div>
+  );
+};
+
 const HeaderComponent2 = function () {
   <div>
     {heading4}

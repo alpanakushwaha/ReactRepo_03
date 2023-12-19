@@ -132,13 +132,13 @@ date: 19 Dec 2023
 > > AST
 
 > > **JSX** => React.createElement => Object => HTML(DOM)
->> JSX is syntactical sugar for Developers
+> > JSX is syntactical sugar for Developers
 
->> BAbEl comes along with parcel
+> > BAbEl comes along with parcel
 
->> **_React Components_**
+> > **_React Components_**
+
 ```javascript
-
 // React Component
 
 const HeaderComponent = () => {
@@ -149,13 +149,24 @@ const HeaderComponent = () => {
   );
 };
 const HeaderComponent2 = () => {
-   (
-    <div>
-      <h1>Namaste React Functional Component</h1>
-    </div>
-  );
+  <div>
+    <h1>Namaste React Functional Component</h1>
+  </div>;
 };
 ```
-in above code, HeaderComponent and HeaderComponent2 are same (acc. to Akshay)
 
-but, they are different, they work differently (if they are same, then How?? and why, i don't know at present)
+> > in above code, HeaderComponent and HeaderComponent2 are same (acc. to Akshay)
+
+> > but, they are different, they work differently (if they are same, then How?? and why, i don't know at present)
+
+---
+
+> > JSX -> xss attack, JSX sanitizes the code.
+
+---
+
+> > _Component composition_-> functional component within functional component
+
+>> Q/A >> if JSX is used in project, Babel should be there for transpiling the code.
+
+>> Q/A >> example. createRoot() is an API => normal function

@@ -44,6 +44,7 @@ const restaurantList = {
           cuisine: ["Asian", " International", " fast food"],
           cost: "350₹",
           estimatedTimeOfArrival: "25 minutes",
+          id: 764,
         },
         {
           name: "Time Traveller three",
@@ -53,6 +54,7 @@ const restaurantList = {
           cuisine: ["Asian", " Italian", " fast food"],
           cost: "420₹",
           estimatedTimeOfArrival: "35 minutes",
+          id: 765,
         },
       ],
     },
@@ -92,9 +94,13 @@ const Body = () => {
     <div className="body-container">
       <SearchBar />
       <div id="restaurantList">
-        <RestaurantCard {...restaurantList.data.cards.card[0]} />
+        {/* <RestaurantCard {...restaurantList.data.cards.card[0]} />
 
-        <RestaurantCard {...restaurantList.data.cards.card[1]} />
+        <RestaurantCard {...restaurantList.data.cards.card[1]} /> */}
+
+        {restaurantList.data.cards.card.map((restForFood) => {
+          return <RestaurantCard {...restForFood} key={restForFood.id} />;
+        })}
       </div>
     </div>
   );

@@ -32,32 +32,58 @@ const Header = () => {
   );
 };
 
+const restaurantList = {
+  data: {
+    cards: {
+      card: [
+        {
+          name: "Time Traveller two",
+          imageSrc:
+            "https://thumbs.dreamstime.com/b/people-eating-healthy-meals-wooden-table-top-view-food-delivery-people-eating-healthy-meals-wooden-table-food-delivery-160387494.jpg",
+          rating: "4.5/5",
+          cuisine: ["Asian", " International", " fast food"],
+          cost: "350₹",
+          estimatedTimeOfArrival: "25 minutes",
+        },
+        {
+          name: "Time Traveller three",
+          imageSrc:
+            "https://thumbs.dreamstime.com/b/people-eating-healthy-meals-wooden-table-top-view-food-delivery-people-eating-healthy-meals-wooden-table-food-delivery-160387494.jpg",
+          rating: "4.7/5",
+          cuisine: ["Asian", " Italian", " fast food"],
+          cost: "420₹",
+          estimatedTimeOfArrival: "35 minutes",
+        },
+      ],
+    },
+  },
+};
+
 const RestaurantCard = () => {
   return (
-    <div id="restaurantCard">
+    <div id="restaurantCardID">
       <img
         id="restaurant-img"
-        src="https://thumbs.dreamstime.com/b/people-eating-healthy-meals-wooden-table-top-view-food-delivery-people-eating-healthy-meals-wooden-table-food-delivery-160387494.jpg"
+        src={restaurantList.data.cards.card[0].imageSrc}
         height="150px"
       ></img>
-      <h3 id="name">Time Traveller</h3>
-      <p id="rating">5/5</p>
-      <p id="cuisines">Indian, International, Asian</p>
-      <p id="cost">300 ₹</p>
-      <p id="eta">30 minutes</p>
+      <h3 id="name">{restaurantList.data.cards.card[0].name}</h3>
+      <p id="rating">{restaurantList.data.cards.card[0].rating}</p>
+      <p id="cuisines">
+        {restaurantList.data.cards.card[0].cuisine.join(", ")}
+      </p>
+      <p id="cost">{restaurantList.data.cards.card[0].cost}</p>
+      <p id="eta">{restaurantList.data.cards.card[0].estimatedTimeOfArrival}</p>
     </div>
   );
 };
 
-const SearchBar = () => {
-  return (
-    <div className="search-bar">
-      <input id="input-search" type="text" style={styleObj}></input>
-      <button id="search-btn">Search</button>
-    </div>
-  );
-};
-const styleObj = { border: " 3px solid grey" };
+const SearchBar = () => (
+  <div className="search-bar">
+    <input id="input-search" type="text"></input>
+    <button id="search-btn">Search</button>
+  </div>
+);
 const Body = () => {
   return (
     <div className="body-container">

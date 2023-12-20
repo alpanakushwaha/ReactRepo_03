@@ -148,17 +148,14 @@ const HeaderComponent = () => {
     </div>
   );
 };
-const HeaderComponent2 = () => {
+const HeaderComponent2 = () => (
   <div>
     <h1>Namaste React Functional Component</h1>
   </div>;
-};
+);
 ```
 
-> > in above code, HeaderComponent and HeaderComponent2 are same (acc. to Akshay)
-
-> > but, they are different, they work differently (if they are same, then How?? and why, i don't know at present)
-
+> > in above code, HeaderComponent and HeaderComponent2 are same.
 ---
 
 > > JSX -> xss attack, JSX sanitizes the code.

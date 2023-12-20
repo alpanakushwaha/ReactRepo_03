@@ -36,7 +36,7 @@
 }
 .body-container,
 #restaurantList,
-#restaurantCard,
+#restaurantCardID,
 .search-bar > #input-search,
 #search-btn {
   margin: 10px;
@@ -51,10 +51,10 @@
   display: flex;
   flex-wrap: nowrap;
 }
-#restaurantCard {
+#restaurantCardID {
   border: 2px solid blue;
 }
-#restaurantCard:hover {
+#restaurantCardID:hover {
   border: 2px solid orangered;
 }
 #restaurant-img {

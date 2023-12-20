@@ -187,7 +187,7 @@ const HeaderComponent2 = () => {
   - Body
     - - Search Bar
     - - Restaurant List
-        - - Restaurant Card
+        - - Restaurant Card (many)
             - image
             - name
             - rating

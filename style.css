@@ -47,3 +47,16 @@
   margin: 10px;
   padding: 10px;
 }
+#restaurantList {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#restaurantCard {
+  border: 2px solid blue;
+}
+#restaurantCard:hover {
+  border: 2px solid orangered;
+}
+#restaurant-img {
+  width: 100%;
+}

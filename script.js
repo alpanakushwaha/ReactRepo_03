@@ -32,25 +32,40 @@ const Header = () => {
   );
 };
 
-const styleObj = { backgroundColor: 'grey' };
+const RestaurantCard = () => {
+  return (
+    <div id="restaurantCard">
+      <img
+        id="restaurant-img"
+        src="https://thumbs.dreamstime.com/b/people-eating-healthy-meals-wooden-table-top-view-food-delivery-people-eating-healthy-meals-wooden-table-food-delivery-160387494.jpg"
+        height="150px"
+      ></img>
+      <h3 id="name">Time Traveller</h3>
+      <p id="rating">5/5</p>
+      <p id="cuisines">Indian, International, Asian</p>
+      <p id="cost">300 ₹</p>
+      <p id="eta">30 minutes</p>
+    </div>
+  );
+};
+
+const SearchBar = () => {
+  return (
+    <div className="search-bar">
+      <input id="input-search" type="text" style={styleObj}></input>
+      <button id="search-btn">Search</button>
+    </div>
+  );
+};
+const styleObj = { border: " 3px solid grey" };
 const Body = () => {
   return (
     <div className="body-container">
-      <div className="search-bar">
-        <input id="input-search" type="text" style={styleObj}></input>
-        <button id="search-btn">Search</button>
-      </div>
+      <SearchBar />
       <div id="restaurantList">
-        <div id="restaurantCard">
-          <img
-            id=""
-            src="https://thumbs.dreamstime.com/b/people-eating-healthy-meals-wooden-table-top-view-food-delivery-people-eating-healthy-meals-wooden-table-food-delivery-160387494.jpg"
-            height="150px"
-          ></img>
-          <h4 id="name">Time Traveller</h4>
-          <h4 id="rating">5/5</h4>
-          <h4 id="cuisines">Indian, International, Asian</h4>
-        </div>
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
       </div>
     </div>
   );

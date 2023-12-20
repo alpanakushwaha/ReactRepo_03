@@ -59,21 +59,22 @@ const restaurantList = {
   },
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  // const [imageSrc, name, rating, cuisine, cost, estimatedTimeOfArrival] = prop;
+  console.log(props);
+
   return (
     <div id="restaurantCardID">
       <img
         id="restaurant-img"
-        src={restaurantList.data.cards.card[0].imageSrc}
+        src={props.resList.imageSrc}
         height="150px"
       ></img>
-      <h3 id="name">{restaurantList.data.cards.card[0].name}</h3>
-      <p id="rating">{restaurantList.data.cards.card[0].rating}</p>
-      <p id="cuisines">
-        {restaurantList.data.cards.card[0].cuisine.join(", ")}
-      </p>
-      <p id="cost">{restaurantList.data.cards.card[0].cost}</p>
-      <p id="eta">{restaurantList.data.cards.card[0].estimatedTimeOfArrival}</p>
+      <h3 id="name">{props.resList.name}</h3>
+      <p id="rating">{props.resList.rating}</p>
+      <p id="cuisines">{props.resList.cuisine.join(", ")}</p>
+      <p id="cost">{props.resList.cost}</p>
+      <p id="eta">{props.resList.estimatedTimeOfArrival}</p>
     </div>
   );
 };
@@ -89,9 +90,9 @@ const Body = () => {
     <div className="body-container">
       <SearchBar />
       <div id="restaurantList">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard resList={restaurantList.data.cards.card[1]} />
+
+        <RestaurantCard resList={restaurantList.data.cards.card[0]} />
       </div>
     </div>
   );

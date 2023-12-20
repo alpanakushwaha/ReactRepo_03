@@ -192,3 +192,8 @@ const HeaderComponent2 = () => (
   - Footer
     - - Links
     - - Copyrights
+
+>> props
+>> destructuring
+>> map
+>> unique key for each card (Reconciliation algo, diff algo, react fiber, react 16, virtual DOM)

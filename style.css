@@ -53,6 +53,8 @@
 }
 #restaurantCardID {
   border: 2px solid blue;
+  min-width: 200px;
+  max-width: 200px;
 }
 #restaurantCardID:hover {
   border: 2px solid orangered;

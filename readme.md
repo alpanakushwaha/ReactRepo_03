@@ -167,6 +167,31 @@ const HeaderComponent2 = () => {
 
 > > _Component composition_-> functional component within functional component
 
->> Q/A >> if JSX is used in project, Babel should be there for transpiling the code.
+> > Q/A >> if JSX is used in project, Babel should be there for transpiling the code.
 
->> Q/A >> example. createRoot() is an API => normal function
+> > Q/A >> example. createRoot() is an API => normal function
+
+---
+
+---
+
+### Episode 04 : Talk is cheap, show me the code
+
+> > Building **_Food Ordering App_**
+
+- Food vill App layout planning
+  - Header
+    - - Logo
+    - - Nav Items (Right Side)
+    - - Cart
+  - Body
+    - - Search Bar
+    - - Restaurant List
+        - - Restaurant Card
+            - image
+            - name
+            - rating
+            - Cuisines
+  - Footer
+    - - Links
+    - - Copyrights

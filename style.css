@@ -1,8 +1,49 @@
-*{
-    margin: 10;
-    padding: 5;
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid green;
 }
 
-h2{
-    color: blue;
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+  padding: 30px 0 0 0;
+}
+
+.nav-items > ul > li {
+  color: blue;
+  padding: 10px;
+}
+/* .nav-items:hover > ul > li {
+  cursor: pointer;
+  color: brown;
+  padding: 10px;
+} */
+#home:hover,
+#about:hover,
+#contact:hover,
+#cart:hover {
+  cursor: pointer;
+  color: brown;
+  padding: 10px;
+}
+.body-container,
+#restaurantList,
+#restaurantCard,
+.search-bar > #input-search,
+#search-btn {
+  margin: 10px;
+  padding: 5px;
+}
+
+.footer {
+  margin: 10px;
+  padding: 10px;
 }

@@ -156,6 +156,7 @@ const HeaderComponent2 = () => (
 ```
 
 > > in above code, HeaderComponent and HeaderComponent2 are same.
+
 ---
 
 > > JSX -> xss attack, JSX sanitizes the code.
@@ -193,7 +194,47 @@ const HeaderComponent2 = () => (
     - - Links
     - - Copyrights
 
->> props
->> destructuring
->> map
->> unique key for each card (Reconciliation algo, diff algo, react fiber, react 16, virtual DOM)
+> > props
+> > destructuring
+> > map
+> > unique key for each card (Reconciliation algo, diff algo, react fiber, react 16, virtual DOM)
+
+---
+
+---
+
+> > Episode 05- Lst's get Hooked
+
+> > File structure
+> > import / export the default and named Components
+
+---
+
+> > _normal const variable_ is **hardcoded**, can't be changed dynamically (not useful in react related files/folders)
+> > this is known as one way data binding
+
+---
+
+> > therefore, react has the concept of useState variables that are dynamic, and can be rendered and re-rendering
+
+> > two way data binding
+
+```javascript
+<input
+  id="input-search"
+  type="text"
+  placeholder="Search"
+  value={searchText}
+  onChange={(e) => 
+  // console.log(e)
+  // console.log(e.target)
+  // console.log(e.target.value)
+  }
+></input>
+```
+
+>> **_useState_** => hook
+>> Q/A What is state?
+>> Q/A What is Hook?
+>> Q/A What is useState? 
+

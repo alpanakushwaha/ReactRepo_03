@@ -238,3 +238,12 @@ const HeaderComponent2 = () => (
 >> Q/A What is Hook?
 >> Q/A What is useState? 
 
+```js
+const [searchTxt, setSearchTxt] = useState("initial input"); 
+
+```
+>> searchTxt => variable
+>> setSearchTxt => function()
+>> useState hook returns an array
+
+>> 

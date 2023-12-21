@@ -1,8 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
 import { swiggyRestaurantList } from "../constants";
+import { useState } from "react";
 
 const SearchBar = () => {
-  const searchText = "kfc"; // hard-coded variable
+  // const searchText = "kfc"; // hard-coded variable
+
+  const [searchTxt, setSearchTxt] = useState("initial input"); //
+  const [searchClicked, setSearchClicked] = useState("false"); //
 
   return (
     <div className="search-bar">
@@ -10,10 +14,19 @@ const SearchBar = () => {
         id="input-search"
         type="text"
         placeholder="Search"
-        value={searchText}
-        onChange={(e) => console.log(e.target.value)}
+        value={searchTxt}
+        onChange={(e) => setSearchTxt(e.target.value)}
       ></input>
-      <button id="search-btn">Search</button>
+      <h3>{searchClicked}</h3>
+      <button
+        id="search-btn"
+        onClick={() => {
+          if (searchClicked == "true") setSearchClicked("false");
+          if (searchClicked == "false") setSearchClicked("true");
+        }}
+      >
+        Search
+      </button>
     </div>
   );
 };

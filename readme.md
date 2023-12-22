@@ -225,7 +225,7 @@ const HeaderComponent2 = () => (
   type="text"
   placeholder="Search"
   value={searchText}
-  onChange={(e) => 
+  onChange={(e) =>
   // console.log(e)
   // console.log(e.target)
   // console.log(e.target.value)
@@ -233,17 +233,17 @@ const HeaderComponent2 = () => (
 ></input>
 ```
 
->> **_useState_** => hook
->> Q/A What is state?
->> Q/A What is Hook?
->> Q/A What is useState? 
+> > **_useState_** => hook
+> > Q/A What is state?
+> > Q/A What is Hook?
+> > Q/A What is useState?
 
 ```js
-const [searchTxt, setSearchTxt] = useState("initial input"); 
-
+const [searchTxt, setSearchTxt] = useState("initial input");
 ```
->> searchTxt => variable
->> setSearchTxt => function()
->> useState hook returns an array
 
->> 
+> > searchTxt => variable
+> > setSearchTxt => function() updates the searchTxt variable
+> > useState hook returns an array
+
+> > React keeps track of _state variables_, reconciliation happens

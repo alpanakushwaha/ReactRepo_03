@@ -1,4 +1,4 @@
-import { CDN_IMG_SRC } from "../constants";
+import { CDN_IMG_SRC } from "../utils/constants";
 
 const RestaurantCard = ({
   cloudinaryImageId,

@@ -1,4 +1,4 @@
-import { LOGO_IMG_SRC } from "../constants";
+import { LOGO_IMG_SRC } from "../utils/constants";
 const Title = () => (
   <h1 id="title" key="h4">
     <a href="kuchbhi!!">

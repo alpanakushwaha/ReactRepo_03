@@ -1,12 +1,26 @@
 import RestaurantCard from "./RestaurantCard";
-import { swiggyRestaurantList } from "../constants";
+import { swiggyRestaurantList } from "../utils/swiggyRestaurantList";
 import { useState } from "react";
+
+function filterData(searchTxt, resList) {
+  const filterData = resList?.data?.cards?.card?.card?.info?.name?.filter(
+    (restroName) => {
+      restroName?.includes(searchTxt);
+    }
+  );
+
+  console.log(filterData)
+  // return filterData;
+}
 
 const SearchBar = () => {
   // const searchText = "kfc"; // hard-coded variable
 
-  const [searchTxt, setSearchTxt] = useState("initial input"); //
-  const [searchClicked, setSearchClicked] = useState("false"); //
+  const [searchTxt, setSearchTxt] = useState(); //
+  const [searchClicked, setSearchClicked] = useState("false");
+  const [resList, setResList] = useState(swiggyRestaurantList);
+
+  // console.log(resList);
 
   return (
     <div className="search-bar">
@@ -17,12 +31,13 @@ const SearchBar = () => {
         value={searchTxt}
         onChange={(e) => setSearchTxt(e.target.value)}
       ></input>
-      <h3>{searchClicked}</h3>
       <button
         id="search-btn"
         onClick={() => {
-          if (searchClicked == "true") setSearchClicked("false");
-          if (searchClicked == "false") setSearchClicked("true");
+          // need to filter the data
+          const data = filterData(searchTxt, resList);
+          // update the state- restaurants
+          setResList(data);
         }}
       >
         Search

@@ -39,6 +39,8 @@ export const swiggyRestaurantList = {
               id: "318387",
               name: "Zyka Restaurant(Parade)",
               cloudinaryImageId: "dpawm0slsgjpzdgybh6v",
+              imgLink:
+                "https://cdn1.vectorstock.com/i/1000x1000/78/35/2024-merry-christmas-and-happy-new-year-greeting-vector-45027835.jpg",
               locality: "Naveen Market Road",
               areaName: "Parade",
               costForTwo: "₹200 for two",
@@ -125,6 +127,8 @@ export const swiggyRestaurantList = {
               id: "511038",
               name: "Zyka { Parade Wala}",
               cloudinaryImageId: "k96ymktl7igizz1tlgg0",
+              imgLink:
+                "https://thumbs.dreamstime.com/b/merry-christmas-digital-card-holiday-greetings-use-design-layouts-merry-christmas-digital-card-holiday-greetings-164675590.jpg",
               locality: "Harjinder Nagar",
               areaName: "Jajmau",
               costForTwo: "₹250 for two",
@@ -204,6 +208,8 @@ export const swiggyRestaurantList = {
               id: "77700",
               name: "R.S Bhojnalaya",
               cloudinaryImageId: "wniumg41joijmp5bscis",
+              imgLink:
+                "https://www.freevector.com/uploads/vector/preview/4005/FreeVector-Merry-Christmas-Greetings.jpg",
               locality: "Avon Market Road",
               areaName: "Kakadeo",
               costForTwo: "₹200 for two",
@@ -300,6 +306,8 @@ export const swiggyRestaurantList = {
               id: "371134",
               name: "Anandeshwar dhaba",
               cloudinaryImageId: "kjjgtixp2kraa18a0yf9",
+              imgLink:
+                "https://c.ndtvimg.com/2020-12/0lgoq65o_christmas-wishes-christmas-pics_625x300_25_December_20.jpg",
               locality: "Raniganj",
               areaName: "Kakadeo",
               costForTwo: "₹300 for two",
@@ -379,6 +387,7 @@ export const swiggyRestaurantList = {
               id: "161678",
               name: "New Rahul Sweets and Restaurant",
               cloudinaryImageId: "sksvs8vc14twyltuyo0s",
+              imgLink: "https://i.123g.us/c/edec_c_newjingle/card/126110.gif",
               locality: "Shahpur",
               areaName: "Panki",
               costForTwo: "₹100 for two",
@@ -475,6 +484,8 @@ export const swiggyRestaurantList = {
               id: "125424",
               name: "Ajmeri Darbar Chamanganj",
               cloudinaryImageId: "v8vwffojtsoarkcnsoih",
+              imgLink:
+                "https://thumbs.dreamstime.com/b/merry-christmas-digital-card-holiday-greetings-use-design-layouts-merry-christmas-digital-card-holiday-greetings-164675590.jpg",
               locality: "Chaman Ganj",
               areaName: "Chamanganj",
               costForTwo: "₹200 for two",
@@ -551,6 +562,8 @@ export const swiggyRestaurantList = {
               id: "293352",
               name: "Tunday Kababi (Naveen Market)",
               cloudinaryImageId: "lutyvwq57c7essoiy65l",
+              imgLink:
+                "https://img.freepik.com/premium-vector/merry-christmas-happy-new-year-2024-greeting-card-hand-written-vector-illustration_155957-1741.jpg",
               locality: "Naveen Market Road",
               areaName: "Parade",
               costForTwo: "₹200 for two",

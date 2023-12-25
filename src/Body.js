@@ -3,59 +3,47 @@ import { swiggyRestaurantList } from "../utils/swiggyRestaurantList";
 import { useState } from "react";
 
 function filterData(searchTxt, resList) {
-  const filterData = resList?.data?.cards?.card?.card?.info?.name?.filter(
-    (restroName) => {
-      restroName?.includes(searchTxt);
-    }
-  );
+  const filterData = resList.filter((restro) => {
+    return restro.card.card.info.name.includes(searchTxt);
+  });
 
-  console.log(filterData)
-  // return filterData;
+  // console.log(filterData);
+  return filterData;
 }
 
-const SearchBar = () => {
-  // const searchText = "kfc"; // hard-coded variable
-
-  const [searchTxt, setSearchTxt] = useState(); //
-  const [searchClicked, setSearchClicked] = useState("false");
-  const [resList, setResList] = useState(swiggyRestaurantList);
-
-  // console.log(resList);
-
-  return (
-    <div className="search-bar">
-      <input
-        id="input-search"
-        type="text"
-        placeholder="Search"
-        value={searchTxt}
-        onChange={(e) => setSearchTxt(e.target.value)}
-      ></input>
-      <button
-        id="search-btn"
-        onClick={() => {
-          // need to filter the data
-          const data = filterData(searchTxt, resList);
-          // update the state- restaurants
-          setResList(data);
-        }}
-      >
-        Search
-      </button>
-    </div>
-  );
-};
-
 const Body = () => {
+  const [searchTxt, setSearchTxt] = useState(""); //
+
+  const [resList, setResList] = useState(swiggyRestaurantList.data.cards);
+  // const [searchClicked, setSearchClicked] = useState("false");
+
+  // console.log("resList: ", resList);
   return (
-    <div className="body-container">
-      <SearchBar />
-      <div id="restaurantList">
-        {/* <RestaurantCard {...restaurantList.data.cards.card[0]} />
-
-        <RestaurantCard {...restaurantList.data.cards.card[1]} /> */}
-
-        {swiggyRestaurantList.data.cards.map((restForFood) => {
+    <>
+      <div className="search-bar">
+        <input
+          id="input-search"
+          type="text"
+          placeholder="Search"
+          value={searchTxt}
+          onChange={(e) => setSearchTxt(e.target.value)}
+        ></input>
+        <button
+          id="search-btn"
+          onClick={() => {
+            // need to filter the data
+            const data1 = filterData(searchTxt, resList);
+            // console.log("data1: ", data1);
+            // console.log(resList);
+            // update the state- restaurants
+            setResList(data1);
+          }}
+        >
+          Search
+        </button>
+      </div>
+      <div className="body-container">
+        {resList.map((restForFood) => {
           return (
             <RestaurantCard
               {...restForFood.card.card.info}
@@ -64,7 +52,7 @@ const Body = () => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 export default Body;

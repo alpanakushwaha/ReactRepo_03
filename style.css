@@ -47,7 +47,7 @@
   margin: 10px;
   padding: 10px;
 }
-#restaurantList {
+.body-container {
   display: flex;
   flex-wrap: nowrap;
 }

@@ -10,19 +10,19 @@ const Title = () => (
 
 const Header = () => {
   console.log("header rendering");
-  const [title2, setTitle2] = useState(
-    "Kuch nahi change hua. Click the btn at right"
-  );
+  // const [title2, setTitle2] = useState(
+  //   "Kuch nahi change hua. Click the btn at right"
+  // );
   return (
     <div className="container">
       <Title />
-      <h4>{title2}</h4>
-      <button
+      {/* <h4>{title2}</h4> */}
+      {/* <button
         id="btn_logo_chng"
         onClick={() => setTitle2("Just Checking onClick Btn 😛")}
       >
         Remove Logo
-      </button>
+      </button> */}
       <div className="nav-items">
         <ul>
           <li id="home">Home</li>

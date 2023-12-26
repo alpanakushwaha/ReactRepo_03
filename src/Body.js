@@ -17,9 +17,20 @@ const Body = () => {
   const [resList, setResList] = useState(swiggyRestaurantList.data.cards);
   // const [searchClicked, setSearchClicked] = useState("false");
 
+  // empty dependency array=> happens once after render
+  // dependency array[searchtext]=> happens once after initial render + everytime serchTxt changes
+
+  // useEffect(() => {
+  //   console.log("useEffect body rendering...");
+  // }, []);
+  // useEffect(() => {
+  //   console.log("useEffect body rendering...searchtext");
+  // }, [searchTxt]);
   useEffect(() => {
-    console.log("body rendering...");
-  }, [searchTxt]);
+    console.log("useEffect body rendering...restaurant");
+  }, [resList]);
+
+  console.log("render");
 
   return (
     <>

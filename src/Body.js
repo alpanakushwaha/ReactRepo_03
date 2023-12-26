@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function filterData(searchTxt, resList) {
   const filterData = resList.filter((restro) => {
-    return restro.card.card.info.name.includes(searchTxt);
+    return restro.info.name.includes(searchTxt);
   });
 
   // console.log(filterData);
@@ -23,12 +23,31 @@ const Body = () => {
   // useEffect(() => {
   //   console.log("useEffect body rendering...");
   // }, []);
+
   // useEffect(() => {
   //   console.log("useEffect body rendering...searchtext");
   // }, [searchTxt]);
+
+  // useEffect(() => {
+  //   console.log("useEffect body rendering...restaurant");
+  // }, [resList]);
+
   useEffect(() => {
-    console.log("useEffect body rendering...restaurant");
-  }, [resList]);
+    // ApI call
+    getResList();
+  }, []);
+
+  async function getResList() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.022505&lng=72.5713621&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    console.log(json);
+    setResList(
+      json?.data?.cards?.[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+  }
 
   console.log("render");
 
@@ -60,8 +79,8 @@ const Body = () => {
         {resList.map((restForFood) => {
           return (
             <RestaurantCard
-              {...restForFood.card.card.info}
-              key={restForFood.card.card.info.id}
+              {...restForFood?.info}
+              key={restForFood?.info?.id}
             />
           );
         })}

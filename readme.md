@@ -247,3 +247,8 @@ const [searchTxt, setSearchTxt] = useState("initial input");
 > > useState hook returns an array
 
 > > React keeps track of _state variables_, reconciliation happens
+
+>> 26th Dec 2023
+
+>> Episode 06 - Exploring the world
+* CORS error

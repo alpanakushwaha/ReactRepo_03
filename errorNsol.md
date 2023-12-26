@@ -13,3 +13,5 @@ to
 ```js
 const [searchTxt, setSearchTxt] = useState("");
 ```
+
+> > exercise: try to change the logo component onClick (using useState)

@@ -62,3 +62,7 @@
 #restaurant-img {
   width: 100%;
 }
+#btn_logo_chng {
+  padding: 5px;
+  border-radius: 25%;
+}

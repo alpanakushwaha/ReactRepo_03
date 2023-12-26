@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { swiggyRestaurantList } from "../utils/swiggyRestaurantList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(searchTxt, resList) {
   const filterData = resList.filter((restro) => {
@@ -17,7 +17,10 @@ const Body = () => {
   const [resList, setResList] = useState(swiggyRestaurantList.data.cards);
   // const [searchClicked, setSearchClicked] = useState("false");
 
-  // console.log("resList: ", resList);
+  useEffect(() => {
+    console.log("body rendering...");
+  }, [searchTxt]);
+
   return (
     <>
       <div className="search-bar">

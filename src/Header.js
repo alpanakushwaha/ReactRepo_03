@@ -9,7 +9,7 @@ const Title = () => (
 );
 
 const Header = () => {
-  console.log("render happening");
+  console.log("header rendering");
   const [title2, setTitle2] = useState(
     "Kuch nahi change hua. Click the btn at right"
   );

@@ -15,3 +15,35 @@ const [searchTxt, setSearchTxt] = useState("");
 ```
 
 > > exercise: try to change the logo component onClick (using useState)
+> > try to handle errors in useEffect()
+
+```js
+useEffect(() => {
+  // ApI call
+
+  try {
+    // code that may throw an error
+    getResList();
+  } catch (error) {
+    // handle the error
+    console.error(error);
+  }
+}, []);
+
+async function getResList() {
+  const data = await fetch(API_URL.data?.cards?.[4]);
+  if (!data.ok) {
+    setStatus("error");
+    throw new Error("Failed to fetch data.");
+  }
+  const json = await data.json();
+  if (!json) {
+    setStatus("empty");
+  } else {
+    setResList(json?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setStatus("Success");
+    console.log(json);
+  }
+}
+```
+>> above code to try-catch useEffect the API, has error(not working.. )

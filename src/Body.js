@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { swiggyRestaurantList } from "../utils/swiggyRestaurantList";
 import { useState, useEffect } from "react";
+import { API_URL } from "../utils/constants";
 
 function filterData(searchTxt, resList) {
   const filterData = resList.filter((restro) => {
@@ -14,8 +15,13 @@ function filterData(searchTxt, resList) {
 const Body = () => {
   const [searchTxt, setSearchTxt] = useState(""); //
 
-  const [resList, setResList] = useState(swiggyRestaurantList.data.cards);
+  // const [resList, setResList] = useState([swiggyRestaurantList.data.cards]);
+
+  const [resList, setResList] = useState([]);
+
   // const [searchClicked, setSearchClicked] = useState("false");
+
+  // const [status, setStatus] = useState("loading");
 
   // empty dependency array=> happens once after render
   // dependency array[searchtext]=> happens once after initial render + everytime serchTxt changes
@@ -34,19 +40,20 @@ const Body = () => {
 
   useEffect(() => {
     // ApI call
+
     getResList();
   }, []);
 
   async function getResList() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.022505&lng=72.5713621&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(API_URL);
+
     const json = await data.json();
-    console.log(json);
+
     setResList(
-      json?.data?.cards?.[5]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
+    console.log(json);
   }
 
   console.log("render");
@@ -78,10 +85,7 @@ const Body = () => {
       <div className="body-container">
         {resList.map((restForFood) => {
           return (
-            <RestaurantCard
-              {...restForFood?.info}
-              key={restForFood?.info?.id}
-            />
+            <RestaurantCard {...restForFood.info} key={restForFood.info?.id} />
           );
         })}
       </div>

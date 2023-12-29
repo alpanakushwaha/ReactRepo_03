@@ -66,3 +66,18 @@
   padding: 5px;
   border-radius: 25%;
 }
+
+.shimmers {
+  display: flex;
+  /* flex-direction: row;  */
+  flex-wrap: nowrap;
+}
+
+.shimmer-card {
+  border: solid 2px blue;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(44, 113, 173);
+  height: 300px;
+  width: 200px;
+}

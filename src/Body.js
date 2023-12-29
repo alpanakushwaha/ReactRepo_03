@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { swiggyRestaurantList } from "../utils/swiggyRestaurantList";
 import { useState, useEffect } from "react";
 import { API_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 function filterData(searchTxt, resList) {
   const filterData = resList.filter((restro) => {
@@ -17,39 +18,25 @@ const Body = () => {
 
   // const [resList, setResList] = useState([swiggyRestaurantList.data.cards]);
 
-  const [resList, setResList] = useState([]);
-
-  // const [searchClicked, setSearchClicked] = useState("false");
-
-  // const [status, setStatus] = useState("loading");
-
-  // empty dependency array=> happens once after render
-  // dependency array[searchtext]=> happens once after initial render + everytime serchTxt changes
-
-  // useEffect(() => {
-  //   console.log("useEffect body rendering...");
-  // }, []);
-
-  // useEffect(() => {
-  //   console.log("useEffect body rendering...searchtext");
-  // }, [searchTxt]);
-
-  // useEffect(() => {
-  //   console.log("useEffect body rendering...restaurant");
-  // }, [resList]);
+  const [allresList, setAllResList] = useState([]);
+  const [filteredResList, setFilteredResList] = useState([]);
 
   useEffect(() => {
     // ApI call
 
-    getResList();
+    getAllResList();
   }, []);
 
-  async function getResList() {
+  async function getAllResList() {
     const data = await fetch(API_URL);
 
     const json = await data.json();
 
-    setResList(
+    setAllResList(
+      json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+    setFilteredResList(
       json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
@@ -58,7 +45,13 @@ const Body = () => {
 
   console.log("render");
 
-  return (
+  // conditional rendering
+  // if restaurant is empty => shimmer UI
+  // if restaurant has data => actual data UI
+
+  return allresList.length == 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-bar">
         <input
@@ -72,18 +65,16 @@ const Body = () => {
           id="search-btn"
           onClick={() => {
             // need to filter the data
-            const data1 = filterData(searchTxt, resList);
-            // console.log("data1: ", data1);
-            // console.log(resList);
-            // update the state- restaurants
-            setResList(data1);
+            const data1 = filterData(searchTxt, allresList);
+     
+            setFilteredResList(data1);
           }}
         >
           Search
         </button>
       </div>
       <div className="body-container">
-        {resList.map((restForFood) => {
+        {filteredResList.map((restForFood) => {
           return (
             <RestaurantCard {...restForFood.info} key={restForFood.info?.id} />
           );

@@ -6,7 +6,7 @@ import Shimmer from "./Shimmer";
 
 function filterData(searchTxt, resList) {
   const filterData = resList.filter((restro) => {
-    return restro.info.name.includes(searchTxt);
+    return restro.info.name?.toLowerCase().includes(searchTxt.toLowerCase());
   });
 
   // console.log(filterData);
@@ -14,9 +14,9 @@ function filterData(searchTxt, resList) {
 }
 
 const Body = () => {
-  const [searchTxt, setSearchTxt] = useState(""); //
+  // Avoid rendering component ??
 
-  // const [resList, setResList] = useState([swiggyRestaurantList.data.cards]);
+  const [searchTxt, setSearchTxt] = useState(""); //
 
   const [allresList, setAllResList] = useState([]);
   const [filteredResList, setFilteredResList] = useState([]);
@@ -66,8 +66,9 @@ const Body = () => {
           onClick={() => {
             // need to filter the data
             const data1 = filterData(searchTxt, allresList);
-     
+
             setFilteredResList(data1);
+            if (!allresList) return null; // early return
           }}
         >
           Search
@@ -75,6 +76,11 @@ const Body = () => {
       </div>
       <div className="body-container">
         {filteredResList.map((restForFood) => {
+          // // if (!allresList) return null; // early return
+
+          if (filteredResList?.length == 0)
+            return <h1>No Restaurant matches your search name..</h1>;
+
           return (
             <RestaurantCard {...restForFood.info} key={restForFood.info?.id} />
           );

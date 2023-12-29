@@ -252,3 +252,5 @@ const [searchTxt, setSearchTxt] = useState("initial input");
 
 >> Episode 06 - Exploring the world
 * CORS error
+
+>> how to avoid rendering a component?

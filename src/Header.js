@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { LOGO_IMG_SRC } from "../utils/constants";
+
+// const loggedInUser = () => {
+//   // API call to check authentication
+//   return true;
+// };
+
 const Title = () => (
   <h1 id="title" key="h4">
     <a href="kuchbhi!!">
@@ -9,6 +15,8 @@ const Title = () => (
 );
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   console.log("header rendering");
   // const [title2, setTitle2] = useState(
   //   "Kuch nahi change hua. Click the btn at right"
@@ -31,6 +39,16 @@ const Header = () => {
           <li id="cart">Cart</li>
         </ul>
       </div>
+
+      {isLoggedIn ? (
+        <button id="logout-btn" onClick={() => setIsLoggedIn(false)}>
+          Logout
+        </button>
+      ) : (
+        <button id="login-btn" onClick={() => setIsLoggedIn(true)}>
+          Login
+        </button>
+      )}
     </div>
   );
 };

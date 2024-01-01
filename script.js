@@ -37,7 +37,7 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "/restaurant/:resId",
+        path: "/restaurant/:restaurantId",
         element: <RestaurantMenu />,
         errorElement: <Error />,
       },

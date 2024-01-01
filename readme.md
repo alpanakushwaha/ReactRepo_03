@@ -248,13 +248,20 @@ const [searchTxt, setSearchTxt] = useState("initial input");
 
 > > React keeps track of _state variables_, reconciliation happens
 
->> 26th Dec 2023
+> > 26th Dec 2023
 
->> Episode 06 - Exploring the world
-* CORS error
+> > Episode 06 - Exploring the world
 
->> how to avoid rendering a component?
+- CORS error
 
->> SPA?
->> routing type: 1> client side routing >> React-app
-              >> 2> server side routing
+> > how to avoid rendering a component?
+
+> > SPA?
+> > routing type: 1> client side routing >> React-app
+> > 2> server side routing
+
+----
+
+> > Episode 07 - Finding the path
+
+- > > Dynamic routing

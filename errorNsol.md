@@ -46,4 +46,7 @@ async function getResList() {
   }
 }
 ```
->> above code to try-catch useEffect the API, has error(not working.. )
+
+> > above code to try-catch useEffect the API, has error(not working.. )
+
+> > try getting error message when your search doesn't match any listed restaurants..

@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       <h1>About Us Page</h1>
-      <p>This is the Namaste React Course. Third folder.</p>
+      <p>This is the Namaste React Course. Chapter 07: Finding the Path 🚀</p>
     </div>
   );
 };

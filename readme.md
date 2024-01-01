@@ -254,3 +254,7 @@ const [searchTxt, setSearchTxt] = useState("initial input");
 * CORS error
 
 >> how to avoid rendering a component?
+
+>> SPA?
+>> routing type: 1> client side routing >> React-app
+              >> 2> server side routing

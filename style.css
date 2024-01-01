@@ -21,6 +21,11 @@
   color: blue;
   padding: 10px;
 }
+
+.nav-items > a {
+  text-decoration: none;
+}
+
 /* .nav-items:hover > ul > li {
   cursor: pointer;
   color: brown;
